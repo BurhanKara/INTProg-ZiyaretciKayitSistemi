@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2 text-center">
+        <h1 class="display-4 mb-4">Gümüşhane Ziyaretçi Kayıt Sistemine Hoş Geldiniz</h1>
+        <p class="lead mb-4">Güvenilir ziyaretci kontrol paneline hoş geldiniz.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="/register" class="btn btn-danger btn-lg px-4 gap-3">Hemen Başla</a>
+            <a href="/login" class="btn btn-outline-secondary btn-lg px-4">Giriş Yap</a>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card" style="min-height: 183px;">
+            <div class="card-body text-center">
+                <a href="https://www.youtube.com/channel/UCSVu-RK61O3OSvPVGqgvE-Q" target="_blank">
+                    <i class="fab fa-youtube" style="font-size: 50px; color: crimson;"></i>
+                </a>
+                <h3>Youtube</h3>
+                <p>Youtube kanalımıza bu linkten ulaşabilirsiniz</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="bi bi-person display-4 text-success mb-3"></i>
+                <h3>Ziyaretci Girişi</h3>
+                <p>Ziyaretci olarak giriş yapın.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="bi bi-shield-lock display-4 text-primary mb-3"></i>
+                <h3>Yönetici Girişi</h3>
+                <p>Yönetici olarak giriş yapın.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="bi bi-telephone-fill display-4 text-danger mb-3"></i>
+                    <h3>İletişim</h3>
+                    <p>Numaramız üzerinden bize ulaşabilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="bi bi-calendar-check display-4 text-warning mb-3"></i>
+                    <h3>Kontrol Paneli</h3>
+                    <p>Günlük ziyaretci sayısını kontrol et.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="fa fa-globe display-4 text-primary mb-3"></i>
+                    <h3>Güvenli</h3>
+                    <p>Bilgileriniz güvenle saklanır.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
