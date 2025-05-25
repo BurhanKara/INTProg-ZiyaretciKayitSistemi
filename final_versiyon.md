@@ -49,3 +49,14 @@ Werkzeug
 │   └── styles.css          # CSS stil dosyası
 ├── requirements.txt        # Kullanılan kütüphaneler
 └── README.md               # Proje açıklama dosyası
+
+Admin girişi: burhankara@gmail.com
+Şifre: 1234
+
+Render linki:https://ziyaretcikayitsistemi-final.onrender.com
+
+
+
+
+
+
