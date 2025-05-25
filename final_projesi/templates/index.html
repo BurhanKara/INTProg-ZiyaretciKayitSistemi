@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2 text-center">
+        <h1 class="display-4 mb-4">ㅤOtel Ziyaretçi Kayıt Sistemineㅤ Hoş Geldiniz</h1>
+        <p class="lead mb-4">Güvenilir ziyaretci kontrol paneline hoş geldiniz.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="/register" class="btn btn-danger btn-lg px-4 gap-3">Hemen Başla</a>
+            <a href="/login" class="btn btn-outline-secondary btn-lg px-4">Giriş Yap</a>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <a href="https://www.youtube.com/channel/UCSVu-RK61O3OSvPVGqgvE-Q" target="_blank"
+            style="text-decoration: none; color: inherit;">
+            <div class="card" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'">
+                <div class="card-body text-center card-hover">
+                    <i class="fab fa-youtube" style="font-size: 67px; color: crimson;"></i>
+                    <h3>Youtube</h3>
+                    <p>Youtube kanalımıza bu linkten ulaşabilirsiniz</p>
+                </div>
+            </div>
+        </a>
+    </div>
+     <div class="col-md-4">
+    <a href="{% if current_user.is_authenticated %}/dashboard{% else %}/login{% endif %}" style="text-decoration: none; color: inherit;">
+        <div class="card" style="transition: transform 0.3s;" 
+             onmouseover="this.style.transform='scale(1.05)'"
+             onmouseout="this.style.transform='scale(1)'">
+            <div class="card-body text-center">
+                <i class="bi bi-person display-4 text-success mb-3"></i>
+                <h3>Ziyaretçi Girişi</h3>
+                <p>Ziyaretçi olarak giriş yapın.</p>
+            </div>
+        </div>
+    </a>
+</div>
+    <div class="col-md-4">
+        <a href="/restoran" style="text-decoration: none; color: inherit;">
+            <div class="card" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'">
+                <div class="card-body text-center">
+                    <i class="fas fa-utensils fa-3x text-primary mb-3"></i>
+
+                    <h2>Restoran</h2>
+                    <p>Restoran menümüze buradan ulaşabilirsiniz.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <a href="/iletisim" style="text-decoration: none; color: inherit;">
+            <div class="card" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'">
+                <div class="card-body text-center">
+                    <i class="bi bi-telephone-fill display-4 text-danger mb-3"></i>
+                    <h3>İletişim</h3>
+                    <p>Numaramız üzerinden bize ulaşabilirsiniz.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="/dashboard" style="text-decoration: none; color: inherit;">
+            <div class="card" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'">
+                <div class="card-body text-center">
+                    <i class="bi bi-calendar-check display-4 text-warning mb-3"></i>
+                    <h3>Kontrol Paneli</h3>
+                    <p>Günlük ziyaretci sayısını kontrol et.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="/security-info" style="text-decoration: none; color: inherit;">
+            <div class="card" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'">
+                <div class="card-body text-center">
+                    <i class="fa fa-globe " style="font-size: 67px; color:gray ;"></i>
+                    <h3>Güvenli</h3>
+                    <p>Bilgileriniz güvenle saklanır.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+  <h1 class="mb-4">Hoşgeldin, {{ current_user.name }}!</h1>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card shadow-sm mb-4">
+        <div class="card-header bg-primary text-white">
+          Profil Bilgileri
+        </div>
+        <div class="card-body">
+          <p><strong>İsim:</strong> {{ current_user.name }}</p>
+          <p><strong>E-posta:</strong> {{ current_user.email }}</p>
+          <p><strong>Rol:</strong> {% if current_user.role == 1 %}Admin{% else %}Kullanıcı{% endif %}</p>
+
+          {% if current_user.role == 1 %}
+          <a href="{{ url_for('admin_panel') }}" class="btn btn-danger mt-3">Admin Paneli</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow-sm mb-4">
+        <div class="card-header bg-success text-white">
+          Son Siparişler
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item">Sipariş #101 - 12 Mayıs 2025</li>
+            <li class="list-group-item">Sipariş #102 - 18 Mayıs 2025</li>
+            <li class="list-group-item">Sipariş #103 - 21 Mayıs 2025</li>
+            <!-- Dinamik verilerle doldurulabilir -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

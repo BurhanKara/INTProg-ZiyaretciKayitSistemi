@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <!-- Sipariş Formu -->
+        <div class="col-lg-8">
+            <div class="card shadow mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Sipariş Oluştur</h4>
+                </div>
+                <div class="card-body">
+                    <form id="orderForm">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Oda No</label>
+                                <input type="text" class="form-control" id="roomNumber" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Kat</label>
+                                <select class="form-select" id="floor">
+                                    <option value="Zemin">Zemin</option>
+                                    <option value="1">1. Kat</option>
+                                    <option value="2">2. Kat</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Ürün Seçin</label>
+                            <select class="form-select" id="productSelect">
+                                <option value="">-- Ürün seçin --</option>
+
+                                <!-- Çorbalar -->
+                                <optgroup label="Çorbalar">
+                                    <option value="tarhana" data-price="25">Tarhana Çorbası - ₺25</option>
+                                    <option value="ezogelin" data-price="25">Ezogelin Çorbası - ₺25</option>
+                                    <option value="mercimek" data-price="25">Mercimek Çorbası - ₺25</option>
+                                </optgroup>
+
+                                <!-- Ana Yemekler -->
+                                <optgroup label="Ana Yemekler">
+                                    <option value="kuru_fasulye" data-price="60">Kuru Fasulye - ₺60</option>
+                                    <option value="iskender" data-price="90">İskender - ₺90</option>
+                                    <option value="manti" data-price="75">Mantı - ₺75</option>
+                                </optgroup>
+
+                                <!-- Tatlılar -->
+                                <optgroup label="Tatlılar">
+                                    <option value="sutlac" data-price="40">Sütlaç - ₺40</option>
+                                    <option value="kunefe" data-price="70">Künefe - ₺70</option>
+                                    <option value="baklava" data-price="80">Baklava - ₺80</option>
+                                </optgroup>
+
+                                <!-- İçecekler -->
+                                <optgroup label="İçecekler">
+                                    <option value="ayran" data-price="15">Ayran - ₺15</option>
+                                    <option value="kola" data-price="20">Kola - ₺20</option>
+                                    <option value="su" data-price="10">Su - ₺10</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Adet</label>
+                                <input type="number" class="form-control" id="quantity" min="1" value="1">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Notlar</label>
+                                <input type="text" class="form-control" id="notes" placeholder="Ekstra not...">
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-primary w-100" onclick="addToCart()">
+                            Sepete Ekle
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sepet -->
+        <div class="col-lg-4">
+            <div class="card shadow sticky-top" style="top: 20px;">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0">Sepetim</h4>
+                </div>
+                <div class="card-body">
+                    <div id="cartItems" class="mb-3">
+                        <p class="text-muted">Sepetiniz boş</p>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <strong>Toplam:</strong>
+                        <span id="totalAmount">₺0</span>
+                    </div>
+                    <button class="btn btn-success w-100" onclick="submitOrder()">
+                        Siparişi Tamamla
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // JavaScript kodu aynı kalacak, sadece ürünler değişti
+    let cart = [];
+
+    function addToCart() {
+        const productSelect = document.getElementById('productSelect');
+        const product = productSelect.options[productSelect.selectedIndex];
+        const quantity = parseInt(document.getElementById('quantity').value);
+        const notes = document.getElementById('notes').value;
+
+        if (!product.value) {
+            alert('Lütfen bir ürün seçin!');
+            return;
+        }
+
+        const item = {
+            id: Date.now(),
+            name: product.text.split(' - ')[0],
+            price: parseFloat(product.dataset.price),
+            quantity: quantity,
+            notes: notes
+        };
+
+        cart.push(item);
+        updateCart();
+        productSelect.selectedIndex = 0;
+        document.getElementById('quantity').value = 1;
+        document.getElementById('notes').value = '';
+    }
+
+    function updateCart() {
+        const cartItems = document.getElementById('cartItems');
+        const totalAmount = document.getElementById('totalAmount');
+
+        if (cart.length === 0) {
+            cartItems.innerHTML = '<p class="text-muted">Sepetiniz boş</p>';
+            totalAmount.textContent = '₺0';
+            return;
+        }
+
+        let html = '';
+        let total = 0;
+
+        cart.forEach(item => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+
+            html += `
+                <div class="d-flex justify-content-between mb-2 border-bottom pb-2">
+                    <div>
+                        <strong>${item.name}</strong>
+                        ${item.notes ? `<small class="d-block text-muted">${item.notes}</small>` : ''}
+                    </div>
+                    <div class="text-end">
+                        <div>${item.quantity} x ₺${item.price}</div>
+                        <div><strong>₺${itemTotal.toFixed(2)}</strong></div>
+                        <button class="btn btn-sm btn-outline-danger mt-1" onclick="removeItem(${item.id})">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+        });
+
+        cartItems.innerHTML = html;
+        totalAmount.textContent = `₺${total.toFixed(2)}`;
+    }
+
+    function removeItem(id) {
+        cart = cart.filter(item => item.id !== id);
+        updateCart();
+    }
+
+    function submitOrder() {
+        const roomNumber = document.getElementById('roomNumber').value;
+        const floor = document.getElementById('floor').value;
+
+        if (cart.length === 0) {
+            alert('Sepetiniz boş!');
+            return;
+        }
+
+        if (!roomNumber) {
+            alert('Lütfen oda numarası girin!');
+            return;
+        }
+
+        const orderData = {
+            room: roomNumber,
+            floor: floor,
+            items: cart
+        };
+
+        // Burada AJAX ile sunucuya gönderme yapabilirsiniz
+        console.log('Sipariş verildi:', orderData);
+        alert('Siparişiniz alındı!');
+
+        // Siparişten sonra temizle
+        cart = [];
+        updateCart();
+        document.getElementById('roomNumber').value = '';
+    }
+</script>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+<style>
+    .card {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .card-header {
+        font-weight: 600;
+    }
+
+    .form-control,
+    .form-select {
+        border-radius: 8px;
+    }
+
+    #cartItems {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    optgroup {
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    optgroup option {
+        font-weight: normal;
+        padding-left: 15px;
+    }
+</style>
+{% endblock %}

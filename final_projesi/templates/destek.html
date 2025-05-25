@@ -1,0 +1,415 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Premium Hero Bölümü -->
+<section class="support-hero text-white d-flex align-items-center">
+    <div class="support-hero-overlay"></div>
+    <div id="particles-js"></div>
+
+    <div class="container position-relative" style="z-index: 3;">
+        <div class="row align-items-center">
+            <div class="col-lg-7 text-center text-lg-start">
+                <div class="d-flex align-items-center justify-content-center justify-content-lg-start mb-3">
+                    <span class="badge bg-primary bg-opacity-25 text-white fs-6 fw-normal px-3 py-2 me-3">
+                        <i class="fas fa-life-ring me-2"></i> 7/24 Destek
+                    </span>
+                    <span class="text-white-50">Otel Rezervasyon Sistemi</span>
+                </div>
+
+                <h1 class="display-3 fw-bold mb-4" style="line-height: 1.2;">
+                    <span class="text-primary">Teknik Destek</span> Merkezi
+                </h1>
+
+                <p class="lead mb-5" style="max-width: 600px;">
+                    Rezervasyon sistemimizle ilgili tüm teknik sorularınız için uzman ekibimiz hazır bekliyor.
+                    <span class="d-block mt-2">Hızlı çözüm için doğru kanalı seçin!</span>
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                    <a href="#technical-faq" class="btn btn-primary btn-lg px-4 py-3 rounded-pill fw-bold">
+                        <i class="fas fa-question-circle me-2"></i> SSS Gezintisi
+                    </a>
+                    <a href="#support-channels" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill fw-bold">
+                        <i class="fas fa-headset me-2"></i> Canlı Destek
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-5 d-none d-lg-block">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                        alt="Destek Ekibi" class="img-fluid rounded-4 shadow-lg"
+                        style="border: 3px solid rgba(255, 255, 255, 0.1);">
+
+                    <div class="position-absolute bottom-0 start-0 translate-middle-y w-100 px-3">
+                        <div class="bg-dark bg-opacity-75 rounded-3 p-3 shadow">
+                            <div class="row g-2 text-center">
+                                <div class="col-4">
+                                    <div class="p-2">
+                                        <i class="fas fa-clock text-primary mb-1"></i>
+                                        <p class="small mb-0">7/24 Destek</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="p-2">
+                                        <i class="fas fa-check-circle text-success mb-1"></i>
+                                        <p class="small mb-0">Hızlı Çözüm</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="p-2">
+                                        <i class="fas fa-shield-alt text-warning mb-1"></i>
+                                        <p class="small mb-0">Güvenli</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#technical-faq" class="position-absolute bottom-0 start-50 translate-middle-x mb-5 text-white"
+        style="z-index: 4;">
+        <i class="fas fa-chevron-down fa-2x animate-bounce"></i>
+    </a>
+</section>
+
+<!-- Sık Sorulan Teknik Sorular (Önceki 10 maddelik içerik aynen buraya gelecek) -->
+<section id="technical-faq" class="py-5 bg-light">
+    <!-- Önceki 10 maddelik SSS içeriği burada -->
+</section>
+
+<!-- Destek Kanalları (Önceki içerik aynen buraya gelecek) -->
+<section id="support-channels" class="py-5">
+    <!-- Önceki destek kanalları içeriği burada -->
+</section>
+
+<!-- Canlı Destek Butonu -->
+<a href="#"
+    class="live-support-badge btn btn-danger rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+    data-bs-toggle="tooltip" data-bs-placement="left" title="Canlı Destek">
+    <i class="fas fa-headset fa-lg"></i>
+</a>
+
+
+<!-- Sık Sorulan Teknik Sorular -->
+<section id="technical-faq" class="py-5 bg-light">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold display-5 mb-3">Sık Sorulan Teknik Sorular</h2>
+            <p class="text-muted">Rezervasyon sistemine dair en çok karşılaşılan sorunlar ve çözümleri</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="accordion" id="technicalFaqAccordion">
+
+                    <!-- Soru 1 -->
+                    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1">
+                                <i class="fas fa-exclamation-circle text-danger me-2"></i> Rezervasyon yaparken "Ödeme
+                                Alınamadı" hatası alıyorum
+                            </button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#technicalFaqAccordion">
+                            <div class="accordion-body">
+                                <ol>
+                                    <li>Kart bilgilerinizi kontrol edin (son kullanma tarihi, CVV)</li>
+                                    <li>Banka kartınızın internet alışverişine açık olduğundan emin olun</li>
+                                    <li>Tarayıcınızın önbelleğini temizleyip (Ctrl+F5) tekrar deneyin</li>
+                                    <li>Farklı bir ödeme yöntemi (EFT, havale) deneyebilirsiniz</li>
+                                    <li>Hata devam ederse 0553 786 02 61 teknik destek hattını arayın</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soru 2 -->
+                    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2">
+                                <i class="fas fa-envelope text-primary me-2"></i> Rezervasyon onay e-postası alamadım
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#technicalFaqAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Öncelikle spam/junk klasörünüzü kontrol edin.</strong> Eğer e-postayı hala
+                                    göremediyseniz:</p>
+                                <ul>
+                                    <li>"Rezervasyonlarım" bölümünden rezervasyonunuzun onaylandığını kontrol edin</li>
+                                    <li>E-posta adresinizi yanlış yazmış olabilirsiniz, profil bilgilerinizi kontrol
+                                        edin</li>
+                                    <li>Rezervasyon numaranızla birlikte <strong>teknik@otelrezervasyon.com</strong>
+                                        adresine mail atın</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soru 3 -->
+                    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3">
+                                <i class="fas fa-calendar-times text-warning me-2"></i> Rezervasyon iptali nasıl
+                                yapılır?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#technicalFaqAccordion">
+                            <div class="accordion-body">
+                                <p>Rezervasyon iptali için:</p>
+                                <ol>
+                                    <li>Hesabınıza giriş yapın</li>
+                                    <li>"Rezervasyonlarım" bölümüne gidin</li>
+                                    <li>İptal etmek istediğiniz rezervasyonu seçin</li>
+                                    <li>"İptal Et" butonuna basın</li>
+                                    <li>İptal politikasına göre ücret iadesi otomatik başlatılacaktır</li>
+                                </ol>
+                                <p class="mt-3"><strong>Not:</strong> Bazı özel fırsat rezervasyonlarında iptal
+                                    yapılamayabilir.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soru 4 -->
+                    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq4">
+                                <i class="fas fa-key text-danger me-2"></i> Şifremi unuttum, nasıl sıfırlayabilirim?
+                            </button>
+                        </h3>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#technicalFaqAccordion">
+                            <div class="accordion-body">
+                                <p>Şifre sıfırlama adımları:</p>
+                                <ol>
+                                    <li>Giriş sayfasında "Şifremi Unuttum" bağlantısına tıklayın</li>
+                                    <li>Kayıtlı e-posta adresinizi girin</li>
+                                    <li>E-postanıza gelen linke tıklayarak yeni şifre belirleyin</li>
+                                    <li>E-posta gelmezse spam klasörünü kontrol edin</li>
+                                    <li>Hala sorun yaşıyorsanız teknik destekle iletişime geçin</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soru 5 -->
+                    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq5">
+                                <i class="fas fa-user-clock text-info me-2"></i> Check-in/check-out saatlerini nasıl
+                                değiştirebilirim?
+                            </button>
+                        </h3>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#technicalFaqAccordion">
+                            <div class="accordion-body">
+                                <p>Rezervasyon sonrası saat değişikliği için:</p>
+                                <ul>
+                                    <li>"Rezervasyonlarım" bölümünden ilgili rezervasyonu seçin</li>
+                                    <li>"Değişiklik Talebi" butonuna basın</li>
+                                    <li>Yeni saat bilgilerinizi girin</li>
+                                    <li>Otel onayına gönderecektir (onay süresi 2 saati bulabilir)</li>
+                                    <li>Aciliyet durumunda 0850 111 22 33 numaralı hattı arayabilirsiniz</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soru 6 -->
+                    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq6">
+                                <i class="fas fa-credit-card text-success me-2"></i> Ödeme yöntemimi nasıl
+                                değiştirebilirim?
+                            </button>
+                        </h3>
+                        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#technicalFaqAccordion">
+                            <div class="accordion-body">
+                                <p>Rezervasyon sonrası ödeme yöntemi değişikliği:</p>
+                                <ol>
+                                    <li>Ödeme yapılmamış rezervasyonlarda "Ödeme Yöntemini Değiştir" seçeneği aktif
+                                        olacaktır</li>
+                                    <li>Ödeme yapılmış rezervasyonlarda yöntem değişikliği yapılamaz</li>
+                                    <li>Farklı bir kartla yeniden ödeme yapıp eski ödemenin iadesini talep edebilirsiniz
+                                    </li>
+                                    <li>İşlemler için "Rezervasyonlarım" bölümünü kullanın</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soru 7 -->
+                    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq7">
+                                <i class="fas fa-users text-primary me-2"></i> Rezervasyona misafir ekleme nasıl
+                                yapılır?
+                            </button>
+                        </h3>
+                        <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#technicalFaqAccordion">
+                            <div class="accordion-body">
+                                <p>Misafir ekleme işlemi:</p>
+                                <ul>
+                                    <li>Rezervasyon oluştururken "Misafir Bilgileri" bölümünden ekleyebilirsiniz</li>
+                                    <li>Rezervasyon sonrası ekleme için "Rezervasyonlarım" bölümünden değişiklik talebi
+                                        oluşturun</li>
+                                    <li>Oda kapasitesini aşmamaya dikkat edin (ek kişi ücreti uygulanabilir)</li>
+                                    <li>Son 24 saat içinde yapılan değişiklikler otel tarafından reddedilebilir</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soru 8 -->
+                    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq8">
+                                <i class="fas fa-file-invoice-dollar text-warning me-2"></i> Fatura bilgilerimi nasıl
+                                güncelleyebilirim?
+                            </button>
+                        </h3>
+                        <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#technicalFaqAccordion">
+                            <div class="accordion-body">
+                                <p>Fatura bilgisi güncelleme:</p>
+                                <ol>
+                                    <li>Hesabınızda "Profil Bilgileri" bölümüne gidin</li>
+                                    <li>"Fatura Bilgileri" sekmesini seçin</li>
+                                    <li>Yeni bilgilerinizi girip kaydedin</li>
+                                    <li><strong>Önemli:</strong> Eski rezervasyonların faturaları bu değişiklikten
+                                        etkilenmez</li>
+                                    <li>Geçmiş faturalar için destek ekibiyle iletişime geçin</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soru 9 -->
+                    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq9">
+                                <i class="fas fa-mobile-alt text-info me-2"></i> Mobil uygulamada giriş yapamıyorum
+                            </button>
+                        </h3>
+                        <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#technicalFaqAccordion">
+                            <div class="accordion-body">
+                                <p>Mobil giriş sorunları için:</p>
+                                <ul>
+                                    <li>Uygulamanın en son sürümünü kullandığınızdan emin olun</li>
+                                    <li>"Şifremi Unuttum" seçeneğiyle şifrenizi sıfırlayın</li>
+                                    <li>Cihazınızı yeniden başlatın</li>
+                                    <li>Uygulama önbelleğini temizleyin (Ayarlar > Uygulamalar)</li>
+                                    <li>Hata devam ederse web sürümünü kullanabilirsiniz</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soru 10 -->
+                    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq10">
+                                <i class="fas fa-server text-secondary me-2"></i> Sistem bakım saatleri nedir?
+                            </button>
+                        </h3>
+                        <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#technicalFaqAccordion">
+                            <div class="accordion-body">
+                                <p>Planlı bakım saatleri:</p>
+                                <ul>
+                                    <li><strong>Haftalık bakım:</strong> Pazar 03:00-05:00 (2 saat)</li>
+                                    <li><strong>Aylık bakım:</strong> Ayın ilk Pazartesi 01:00-03:00</li>
+                                    <li>Bakım öncesi e-posta ve SMS ile bilgilendirme yapılır</li>
+                                    <li>Acil bakımlar için <a href="#">sistem durumu</a> sayfamızı takip edin</li>
+                                    <li>Bakım sırasında rezervasyon yapılamaz</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Destek Kanalları -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-5 text-center">
+                        <h3 class="fw-bold mb-4">Yardıma mı ihtiyacınız var?</h3>
+                        <p class="text-muted mb-4">SSS bölümünde cevabını bulamadığınız sorularınız için destek
+                            ekibimizle iletişime geçin</p>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="tel:+908501112233" class="btn btn-primary px-4 py-2">
+                                <i class="fas fa-phone me-2"></i> 0553 786 02 61
+                            </a>
+                            <a href="mailto:teknik@otelrezervasyon.com" class="btn btn-success px-4 py-2">
+                                <i class="fas fa-envelope me-2"></i> E-posta Gönder
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Canlı Destek Butonu -->
+<a href="#"
+    class="live-support-badge btn btn-danger rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+    data-bs-toggle="tooltip" data-bs-placement="left" title="Canlı Destek">
+    <i class="fas fa-headset fa-lg"></i>
+</a>
+
+<!-- Particles.js ve Diğer Scriptler -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    // Particles.js konfigürasyonu
+    document.addEventListener('DOMContentLoaded', function () {
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 60, density: { enable: true, value_area: 800 } },
+                color: { value: "#3b82f6" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#3b82f6", opacity: 0.3, width: 1 },
+                move: { enable: true, speed: 3, direction: "none", random: true, straight: false, out_mode: "out" }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" }
+                }
+            }
+        });
+    });
+
+    // Canlı destek butonu tooltip
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+
+    // Canlı destek butonu tıklama
+    document.querySelector('.live-support-badge').addEventListener('click', function (e) {
+        e.preventDefault();
+        alert('Canlı destek ekranı açılacak. Entegrasyon için teknik ekibe başvurun.');
+    });
+</script>
+
+{% endblock %}

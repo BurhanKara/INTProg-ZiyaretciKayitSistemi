@@ -1,0 +1,296 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<!-- Hakkında Sayfası İçeriği -->
+<div class="about-page">
+    <!-- Hero Parallax Section -->
+    <section class="parallax-section py-5 d-flex align-items-center"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+        <div class="container text-white text-center animate-fadeInUp">
+            <h1 class="display-3 fw-bold mb-4">Otelimiz Hakkında</h1>
+            <p class="lead mb-5">Konforun ve lüksün adresi</p>
+            <a href="#about-content" class="btn btn-primary btn-lg px-4 py-2 rounded-pill scroll-down">
+                <i class="fas fa-chevron-down me-2"></i> Keşfet
+            </a>
+        </div>
+    </section>
+
+    <!-- Hakkında Bilgiler -->
+    <div id="about-content" class="container py-5">
+        <div class="row mb-5 align-items-center animate-fadeInUp" style="animation-delay: 0.2s;">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Otel Görseli" class="img-fluid rounded-4 shadow-lg">
+                    <div class="position-absolute top-0 start-0 bg-primary text-white px-3 py-2 rounded-end">
+                        <i class="fas fa-award me-2"></i> 5 Yıldızlı Otel
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="ps-lg-5">
+                    <h2 class="fw-bold mb-4 display-5">Misyonumuz</h2>
+                    <p class="lead text-muted mb-4">Misafirlerimize unutulmaz bir konaklama deneyimi sunmak için
+                        teknoloji ve konforu bir araya getiriyoruz.</p>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                            <i class="fas fa-check-circle text-primary fs-4"></i>
+                        </div>
+                        <p class="mb-0">Profesyonel ziyaretçi kayıt sistemimiz</p>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                            <i class="fas fa-check-circle text-primary fs-4"></i>
+                        </div>
+                        <p class="mb-0">%100 güvenli ödeme altyapısı</p>
+                    </div>
+
+                    <h2 class="fw-bold mt-5 mb-4 display-5">Vizyonumuz</h2>
+                    <p class="lead text-muted">Sektörde öncü bir marka olarak, misafir memnuniyetini en üst seviyede
+                        tutmayı hedefliyoruz.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Özellikler (3 Kart Tam Halde) -->
+        <div class="row text-center mb-5">
+            <div class="col-md-4 mb-4 animate-fadeInUp" style="animation-delay: 0.3s;">
+                <div class="feature-card card h-100 border-0 shadow-sm p-4">
+                    <div class="feature-icon text-primary mb-4">
+                        <div class="bg-primary bg-opacity-10 p-4 rounded-circle d-inline-block">
+                            <i class="fas fa-bolt fa-2x"></i>
+                        </div>
+                    </div>
+                    <h3 class="mb-3">Hızlı Kayıt</h3>
+                    <p class="text-muted mb-4">Online rezervasyon ve hızlı check-in ile zaman kazanın</p>
+                    <a href="#" class="btn btn-outline-primary rounded-pill">Detaylar <i
+                            class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 animate-fadeInUp" style="animation-delay: 0.4s;">
+                <div class="feature-card card h-100 border-0 shadow-sm p-4">
+                    <div class="feature-icon text-primary mb-4">
+                        <div class="bg-primary bg-opacity-10 p-4 rounded-circle d-inline-block">
+                            <i class="fas fa-shield-alt fa-2x"></i>
+                        </div>
+                    </div>
+                    <h3 class="mb-3">Güvenli Sistem</h3>
+                    <p class="text-muted mb-4">Gelişmiş güvenlik önlemleri ile verileriniz koruma altında</p>
+                    <a href="#" class="btn btn-outline-primary rounded-pill">Detaylar <i
+                            class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 animate-fadeInUp" style="animation-delay: 0.5s;">
+                <div class="feature-card card h-100 border-0 shadow-sm p-4">
+                    <div class="feature-icon text-primary mb-4">
+                        <div class="bg-primary bg-opacity-10 p-4 rounded-circle d-inline-block">
+                            <i class="fas fa-headset fa-2x"></i>
+                        </div>
+                    </div>
+                    <h3 class="mb-3">7/24 Destek</h3>
+                    <p class="text-muted mb-4">İhtiyaç duyduğunuz her an yanınızdayız</p>
+                    <a href="#" class="btn btn-outline-primary rounded-pill">Detaylar <i
+                            class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- İstatistikler -->
+        <div class="stats-section bg-primary text-white p-5 rounded-4 mb-5 animate-fadeInUp"
+            style="animation-delay: 0.6s;">
+            <div class="row text-center">
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <div class="counter display-4 fw-bold mb-2" data-target="10000">0</div>
+                    <p class="mb-0 text-uppercase small">Mutlu Misafir</p>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <div class="counter display-4 fw-bold mb-2" data-target="10">0</div>
+                    <p class="mb-0 text-uppercase small">Yıllık Deneyim</p>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <div class="counter display-4 fw-bold mb-2" data-target="98">0</div>
+                    <p class="mb-0 text-uppercase small">Memnuniyet Oranı</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter display-4 fw-bold mb-2" data-target="100">0</div>
+                    <p class="mb-0 text-uppercase small">Oda Kapasitesi</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ekibimiz (6 Kişi - 3 Erkek 3 Kadın) -->
+        <div class="team-section mb-5">
+            <div class="text-center mb-5 animate-fadeInUp" style="animation-delay: 0.7s;">
+                <h2 class="fw-bold display-5 mb-3">Ekibimiz</h2>
+                <p class="lead text-muted w-75 mx-auto">Deneyimli ve profesyonel ekibimizle sizlere en iyi hizmeti
+                    sunmaktan gurur duyuyoruz</p>
+            </div>
+            <div class="row text-center">
+                <!-- 1. Kişi (Burhan KARA) -->
+                <div class="col-md-4 mb-4 animate-fadeInUp" style="animation-delay: 0.8s;">
+                    <div class="team-card card border-0 shadow-sm h-100">
+                        <div class="card-body py-4 px-4">
+                            <div class="position-relative mb-3">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Burhan KARA"
+                                    class="rounded-circle img-thumbnail shadow-sm" width="150" height="150">
+                                <div class="position-absolute bottom-0 end-0 bg-primary text-white p-2 rounded-circle">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <h4 class="mb-2">Burhan KARA</h4>
+                            <p class="text-muted mb-3">Genel Müdür</p>
+                            <div class="social-links">
+                                <a href="#" class="me-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i class="fas fa-envelope fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Kişi (Kadın) -->
+                <div class="col-md-4 mb-4 animate-fadeInUp" style="animation-delay: 0.9s;">
+                    <div class="team-card card border-0 shadow-sm h-100">
+                        <div class="card-body py-4 px-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ayşe YILMAZ"
+                                class="rounded-circle img-thumbnail shadow-sm" width="150" height="150">
+                            <h4 class="mb-2">Ayşe YILMAZ</h4>
+                            <p class="text-muted mb-3">Misafir İlişkileri Müdürü</p>
+                            <div class="social-links">
+                                <a href="#" class="me-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i class="fas fa-envelope fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Kişi (Erkek) -->
+                <div class="col-md-4 mb-4 animate-fadeInUp" style="animation-delay: 1.0s;">
+                    <div class="team-card card border-0 shadow-sm h-100">
+                        <div class="card-body py-4 px-4">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Mehmet DEMİR"
+                                class="rounded-circle img-thumbnail shadow-sm" width="150" height="150">
+                            <h4 class="mb-2">Mehmet DEMİR</h4>
+                            <p class="text-muted mb-3">Teknoloji Direktörü</p>
+                            <div class="social-links">
+                                <a href="#" class="me-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i class="fas fa-envelope fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Kişi (Kadın) -->
+                <div class="col-md-4 mb-4 animate-fadeInUp" style="animation-delay: 1.1s;">
+                    <div class="team-card card border-0 shadow-sm h-100">
+                        <div class="card-body py-4 px-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Zeynep ŞAHİN"
+                                class="rounded-circle img-thumbnail shadow-sm" width="150" height="150">
+                            <h4 class="mb-2">Zeynep ŞAHİN</h4>
+                            <p class="text-muted mb-3">Pazarlama Müdürü</p>
+                            <div class="social-links">
+                                <a href="#" class="me-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i class="fas fa-envelope fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Kişi (Erkek) -->
+                <div class="col-md-4 mb-4 animate-fadeInUp" style="animation-delay: 1.2s;">
+                    <div class="team-card card border-0 shadow-sm h-100">
+                        <div class="card-body py-4 px-4">
+                            <img src="https://randomuser.me/api/portraits/men/90.jpg" alt="Can AKSOY"
+                                class="rounded-circle img-thumbnail shadow-sm" width="150" height="150">
+                            <h4 class="mb-2">Can AKSOY</h4>
+                            <p class="text-muted mb-3">Mutfak Şefi</p>
+                            <div class="social-links">
+                                <a href="#" class="me-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i class="fas fa-envelope fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Kişi (Kadın) -->
+                <div class="col-md-4 mb-4 animate-fadeInUp" style="animation-delay: 1.3s;">
+                    <div class="team-card card border-0 shadow-sm h-100">
+                        <div class="card-body py-4 px-4">
+                            <div class="position-relative">
+                                <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Elif KORKMAZ"
+                                    class="rounded-circle img-thumbnail shadow-sm" width="150" height="150">
+                                <div class="position-absolute bottom-0 end-0 bg-primary text-white p-2 rounded-circle">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                            <h4 class="mb-2">Elif KORKMAZ</h4>
+                            <p class="text-muted mb-3">Otel Müdürü</p>
+                            <div class="social-links">
+                                <a href="#" class="me-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i class="fas fa-envelope fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript Animasyonları -->
+<script>
+    // Scroll animasyonu
+    document.querySelectorAll('.scroll-down').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Sayıcı animasyonu
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    function animateCounters() {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(animateCounters, 1);
+            } else {
+                const suffix = counter.getAttribute('data-target').includes('%') ? '%' :
+                    (counter.getAttribute('data-target').includes('+') ? '+' : '');
+                counter.innerText = target + suffix;
+            }
+        });
+    }
+
+    // Intersection Observer ile animasyonları tetikleme
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.classList.contains('stats-section')) {
+                    animateCounters();
+                }
+                entry.target.classList.add('animate-fadeInUp');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-fadeInUp').forEach(el => {
+        observer.observe(el);
+    });
+</script>
+{% endblock %}
