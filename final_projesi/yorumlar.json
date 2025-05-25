@@ -1,0 +1,37 @@
+[
+    {
+        "id": 5,
+        "user_id": 6,
+        "user_name": "Yasin ",
+        "content": "\"Ailecek harika bir tatil geçirdik\"\r\nÇocuklar için oyun alanı olması bizim için büyük artıydı. Havuz temizdi ve restoran çok çeşitliydi. Ailecek rahat ettik, personel çok güler yüzlüydü.",
+        "created_at": "2025-05-25 17:46:01"
+    },
+    {
+        "id": 4,
+        "user_id": 5,
+        "user_name": "Ali ",
+        "content": "\"Balayı için doğru tercih!\"\r\nEşimle balayımızı burada geçirdik ve her şey kusursuzdu. Odaya girişte sürpriz ikramlar bile vardı. Sessiz, huzurlu ve çok romantik bir ortam.",
+        "created_at": "2025-05-25 17:45:35"
+    },
+    {
+        "id": 3,
+        "user_id": 8,
+        "user_name": "Şefik MERSİNLİ",
+        "content": "\"Konum harika ama biraz gürültülüydü\"\r\nŞehrin tam merkezinde olması büyük avantaj ama gece biraz trafik sesi vardı. Onun dışında her şey gayet iyiydi. Resepsiyon çok ilgiliydi.",
+        "created_at": "2025-05-25 17:45:08"
+    },
+    {
+        "id": 2,
+        "user_id": 4,
+        "user_name": "Muhammet ALTUNBAŞ",
+        "content": "\"Mükemmel bir konaklama deneyimiydi!\"\r\nOda tertemizdi ve manzara harikaydı. Personel son derece yardımseverdi. Özellikle kahvaltıya bayıldık, çeşit çok fazlaydı. Kesinlikle tekrar geleceğiz!",
+        "created_at": "2025-05-25 17:44:34"
+    },
+    {
+        "id": 1,
+        "user_id": 9,
+        "user_name": "Munçiki",
+        "content": "Otel Rezervasyonu gayet şık ve yeterliydi lobide bana bir çok teklif sunuldu. İnsanlar çok iyiydi ben gayet beğendim.",
+        "created_at": "2025-05-25 17:41:40"
+    }
+]

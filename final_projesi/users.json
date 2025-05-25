@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Burhan Kara",
+        "email": "burhankara@gmail.com",
+        "password": "pbkdf2:sha256:600000$MkjDf1oY9UotB06t$95f7b23f07271ea67309e1f508e9df1d95fe61cf7a49d732c0cb91642d217172"
+    },
+    {
+        "id": 4,
+        "name": "Muhammet ALTUNBAŞ",
+        "email": "muhammetaltunbas@gmail.com",
+        "password": "pbkdf2:sha256:600000$3q6Vd5maIwiDa4rg$674e1451f7bc55ecc4459b09d524be782f3b68c010d2efbf996e71ff2fb3818d"
+    },
+    {
+        "id": 5,
+        "name": "Ali ",
+        "email": "ali@gmail.com",
+        "password": "pbkdf2:sha256:600000$XTvBSG35HRrvjuJF$18b29fc26b66323b0141c76442d5668b0700e7d81758cefaa875da38834a4baa"
+    },
+    {
+        "id": 6,
+        "name": "Yasin ",
+        "email": "yasin@gmail.com",
+        "password": "pbkdf2:sha256:600000$B0W3Wtgt2bMqQFib$fe395d2ae69cc4c26fb5dd2585938665706dc29febcd9fcf5b95145001155f87"
+    },
+    {
+        "id": 7,
+        "name": "Muhammet Çilenk",
+        "email": "muhammetcilenk@gmail.com",
+        "password": "pbkdf2:sha256:600000$Kdv28530PRSxO5jQ$aeddcdfde1c9bef5a10e8cd72f8f0fe00d48b1d5eebae76dac58fa2580e9e152"
+    },
+    {
+        "id": 8,
+        "name": "Şefik MERSİNLİ",
+        "email": "sefikmersinli@gmail.com",
+        "password": "pbkdf2:sha256:600000$p7EjKNxQh6TABVaV$f92ab87016db681cf56e6df5cc5914746a5254da9201ee51f732f8d9e88b0609"
+    },
+    {
+        "id": 9,
+        "name": "Munçiki",
+        "email": "munciki@gmail",
+        "password": "pbkdf2:sha256:600000$0E2aMAlVRTWk4x6e$edf754f6fe2d533eea899c1b81feb67b7ada42afc1dbb05cff27d10f96ad9d55"
+    }
+]
